@@ -61,7 +61,7 @@ export class Game {
 
     // --- AI specific properties ---
     private lastAIUpdateTime: number = 0; // Timestamp of the last AI decision update.
-    private readonly AI_UPDATE_INTERVAL_MS = 1;
+    private readonly AI_UPDATE_INTERVAL_MS = 1000;
 
     // --- Power-up specific properties ---
     private powerUp: PowerUp | null = null; // The power-up instance.
