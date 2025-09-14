@@ -21,18 +21,14 @@ A Fastify-based HTTPS server that serves the frontend with:
 
 ## 🚀 Start the project
 
-Put the content of the certificates in their files (you will find their content in the 'env_transcendence' file).
-
-Then, replace GOOGLE_CLIENT_ID (in main.ts) by the value in 'env_transcendence'.
-
-Then, go to the root of the project and run:
+To start the project, go to the root of the project and run:
 
 make
 
 This command will:
 1. Check prerequisites (Docker, Docker Compose)
-2. Generate SSL certificates if needed
-3. Build the Docker containers
+2. Build the Front-End
+3. Build the Docker container
 4. Start the application
 
 ## 🌐 Access
@@ -48,25 +44,4 @@ During development, you'll see a browser security warning due to self-signed cer
 1. Click "Advanced" in the warning
 2. Click "Proceed to localhost (unsafe)"
 3. Your game will load securely over HTTPS
-```
-
-## 🐳 Docker
-
-### Launch the project
-
-```bash
-make
-```
-
-### Manual Docker Compose
-
-```bash
-docker-compose up --build
-```
-
-## 🔧 SSL Certificates
-
-The backend requires SSL certificates. For development, self-signed certificates are automatically generated. For production, replace them with proper certificates.
-
-**Important**: SSL certificates in `backend/certs/` are excluded from version control for security. They will be generated automatically when running the startup scripts.
 
